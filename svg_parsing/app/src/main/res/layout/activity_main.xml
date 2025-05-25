@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    android:padding="8dp">
+
+    <!-- Floor buttons container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rounded_white"
+        android:padding="8dp"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btnFloor1"
+            style="@style/FloorButton"
+            android:text="1 этаж"/>
+
+        <Button
+            android:id="@+id/btnFloor2"
+            style="@style/FloorButton"
+            android:text="2 этаж"/>
+
+        <Button
+            android:id="@+id/btnFloor3"
+            style="@style/FloorButton"
+            android:text="3 этаж"/>
+
+        <Button
+            android:id="@+id/btnFloor4"
+            style="@style/FloorButton"
+            android:text="4 этаж"/>
+
+        <Button
+            android:id="@+id/btnFloor5"
+            style="@style/FloorButton"
+            android:text="5 этаж"/>
+    </LinearLayout>
+
+    <!-- Map container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_rounded_white"
+        android:elevation="4dp">
+
+        <com.example.svg_parsing.MapView
+            android:id="@+id/MapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <!-- Search container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rounded_white"
+        android:padding="12dp"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:id="@+id/startRoomLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Откуда"
+                android:textColor="#666"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/startRoomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Выберите комнату"
+                android:padding="8dp"
+                android:background="@drawable/bg_edittext"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/endRoomLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Куда"
+                android:textColor="#666"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/endRoomInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Выберите комнату"
+                android:padding="8dp"
+                android:background="@drawable/bg_edittext"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusable="false"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/findPathButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:text="▶"
+            android:textSize="20sp"
+            android:background="@drawable/bg_find_button"
+            android:textColor="#fff"/>
+    </LinearLayout>
+</LinearLayout>
